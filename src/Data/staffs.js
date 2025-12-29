@@ -68,104 +68,52 @@ export const getLeadersData = () => {
                 "Increased member retention by 40%"
             ],
             tenure: "1 year"
-        }
-    //     {
-    //         id: 4,
-    //         profilePicture: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-    //         fullName: "Robert Kim",
-    //         role: "VP of Community",
-    //         socialLinks: {
-    //             telegram: "https://t.me/robertkim",
-    //             linkedIn: "https://linkedin.com/in/robertkim",
-    //             github: "https://github.com/robertkim"
-    //         },
-    //         description: "Computer Engineering junior passionate about building inclusive tech communities. Manages member onboarding, mentorship programs, and community engagement initiatives. Created our peer mentorship program that pairs 100+ students annually. Focuses on diversity, equity, and inclusion in tech. Organized successful networking events with industry partners and alumni.",
-    //         expertise: ["Community Building", "Mentorship Programs", "DEI Initiatives", "Public Relations"],
-    //         year: "Junior",
-    //         major: "Computer Engineering",
-    //         email: "robert.kim@techinnovators.edu",
-    //         achievements: [
-    //             "Created peer mentorship program",
-    //             "Increased female participation by 60%",
-    //             "Organized 10+ networking events",
-    //             "Built alumni network of 200+"
-    //         ],
-    //         tenure: "1 year"
-    //     },
-    //     {
-    //         id: 5,
-    //         profilePicture: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-    //         fullName: "Sophia Lee",
-    //         role: "VP of Marketing & Outreach",
-    //         socialLinks: {
-    //             telegram: "https://t.me/sophialee",
-    //             linkedIn: "https://linkedin.com/in/sophialee",
-    //             github: "https://github.com/sophialee"
-    //         },
-    //         description: "Design & Technology major with expertise in digital marketing and brand development. Manages club's social media presence, website, and promotional materials. Increased our online following by 300% and improved event attendance by 50%. Creates engaging content and establishes partnerships with other student organizations. Passionate about telling compelling stories about technology and innovation.",
-    //         expertise: ["Digital Marketing", "Brand Strategy", "Content Creation", "UI/UX Design"],
-    //         year: "Sophomore",
-    //         major: "Design & Technology",
-    //         email: "sophia.lee@techinnovators.edu",
-    //         achievements: [
-    //             "Increased social media following by 300%",
-    //             "Redesigned club website and branding",
-    //             "Improved event attendance by 50%",
-    //             "Established 10+ cross-club partnerships"
-    //         ],
-    //         tenure: "8 months"
-    //     }
-    ];
-};
-
-// Extended leaders data for additional coverage
-export const getExtendedLeaders = () => {
-    return [
+        },
         {
-            id: 6,
-            profilePicture: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-            fullName: "David Park",
-            role: "Technical Lead - AI/ML",
+            id: 4,
+            profilePicture: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+            fullName: "Robert Kim",
+            role: "VP of Community",
             socialLinks: {
-                telegram: "https://t.me/davidpark",
-                linkedIn: "https://linkedin.com/in/davidpark",
-                github: "https://github.com/davidpark"
+                telegram: "https://t.me/robertkim",
+                linkedIn: "https://linkedin.com/in/robertkim",
+                github: "https://github.com/robertkim"
             },
-            description: "AI Research assistant with focus on machine learning and computer vision. Leads our AI/ML project teams and research initiatives. Published research in ML conferences and contributes to open-source AI projects. Teaches machine learning workshops and mentors students interested in AI careers.",
-            expertise: ["Machine Learning", "Computer Vision", "Research", "Python"],
-            year: "Senior",
-            major: "Artificial Intelligence",
-            email: "david.park@techinnovators.edu",
+            description: "Computer Engineering junior passionate about building inclusive tech communities. Manages member onboarding, mentorship programs, and community engagement initiatives. Created our peer mentorship program that pairs 100+ students annually. Focuses on diversity, equity, and inclusion in tech. Organized successful networking events with industry partners and alumni.",
+            expertise: ["Community Building", "Mentorship Programs", "DEI Initiatives", "Public Relations"],
+            year: "Junior",
+            major: "Computer Engineering",
+            email: "robert.kim@techinnovators.edu",
             achievements: [
-                "Published AI research papers",
-                "Led 5 ML project teams",
-                "Created AI curriculum for club",
-                "Open-source contributor"
+                "Created peer mentorship program",
+                "Increased female participation by 60%",
+                "Organized 10+ networking events",
+                "Built alumni network of 200+"
             ],
             tenure: "1 year"
         },
         {
-            id: 7,
-            profilePicture: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-            fullName: "Michael Thompson",
-            role: "Technical Lead - Web Development",
+            id: 5,
+            profilePicture: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+            fullName: "Sophia Lee",
+            role: "VP of Marketing & Outreach",
             socialLinks: {
-                telegram: "https://t.me/michaelthompson",
-                linkedIn: "https://linkedin.com/in/michaelthompson",
-                github: "https://github.com/michaelthompson"
+                telegram: "https://t.me/sophialee",
+                linkedIn: "https://linkedin.com/in/sophialee",
+                github: "https://github.com/sophialee"
             },
-            description: "Full-stack developer specializing in modern web technologies. Leads our web development workshops and project teams. Previously interned at GitHub and contributed to major open-source projects. Creates comprehensive learning resources and maintains our technical documentation.",
-            expertise: ["React/Next.js", "Node.js", "TypeScript", "DevOps"],
-            year: "Junior",
-            major: "Web Technologies",
-            email: "michael.thompson@techinnovators.edu",
+            description: "Design & Technology major with expertise in digital marketing and brand development. Manages club's social media presence, website, and promotional materials. Increased our online following by 300% and improved event attendance by 50%. Creates engaging content and establishes partnerships with other student organizations. Passionate about telling compelling stories about technology and innovation.",
+            expertise: ["Digital Marketing", "Brand Strategy", "Content Creation", "UI/UX Design"],
+            year: "Sophomore",
+            major: "Design & Technology",
+            email: "sophia.lee@techinnovators.edu",
             achievements: [
-                "Contributed to open-source projects",
-                "Led 10+ web development workshops",
-                "Built club's technical documentation",
-                "Former GitHub intern"
+                "Increased social media following by 300%",
+                "Redesigned club website and branding",
+                "Improved event attendance by 50%",
+                "Established 10+ cross-club partnerships"
             ],
-            tenure: "1.5 years"
+            tenure: "8 months"
         }
     ];
 };

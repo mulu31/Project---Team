@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./Components/Navbar";
 import About from "./sections/About";
 import MissionAndVision from "./sections/MissionAndVision";
+import AdminNavbar from "./Components/AdminNavbar";
 import Staffs from "./sections/Staffs";
 import Projects from "./sections/projects";
 import Contact from "./sections/Contact";

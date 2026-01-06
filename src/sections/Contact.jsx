@@ -1,8 +1,6 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import Message from "../Components/Message";
+import { useState } from "react";
 import { getContactInfo } from "../Data/contactInfo";
-import { useNewsletter } from "../Hooks/useNewsletter";
+import { useScrollAnimation } from "../Hooks/useScrollAnimation";
 
 const LOCAL_STORAGE_KEY = "contact_info";
 
@@ -16,170 +14,235 @@ export default function Contact() {
     return localContactInfo;
   });
 
-  const { email, setEmail, isSubscribed, isLoading, error, handleSubscribe } =
-    useNewsletter();
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+
+  const [headerRef, headerVisible] = useScrollAnimation(0.2);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission here
+    console.log('Form submitted:', formData);
+    // Reset form
+    setFormData({
+      name: '',
+      email: '',
+      subject: '',
+      message: ''
+    });
+  };
 
   return (
-    <section className="py-16 bg-white dark:bg-slate-950 transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-10 text-center lg:text-left">
-          Contact Us
-        </h2>
-
-        <div className="flex flex-col lg:flex-row gap-12">
-          {/* Left Side: Message Form */}
-          <div className="w-full lg:w-3/5 bg-white dark:bg-slate-900 p-6 md:p-8 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm">
-            <Message />
-          </div>
-
-          {/* Right Side: Contact Info */}
-          <div className="w-full lg:w-2/5 space-y-8">
-            <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-blue-600">
-                {data.clubName}
-              </h3>
-
-              {/* Location Block */}
-              <div className="flex gap-4">
-                <span className="material-symbols-outlined text-slate-400 mt-1">
-                  location_on
-                </span>
-                <div className="text-slate-600 dark:text-slate-400">
-                  <h4 className="font-bold text-slate-900 dark:text-white uppercase text-xs tracking-widest mb-1">
-                    Location
+    <section id="contact" className="py-20 px-4 bg-gray-50 dark:bg-slate-900 transition-colors duration-300">
+      <div className="max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Left Side: Contact Information */}
+          <div 
+            ref={headerRef}
+            className={`transition-all duration-800 ${
+              headerVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
+            }`}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6">
+              Contact Information
+            </h2>
+            <p className="text-slate-600 dark:text-slate-400 mb-8">
+              Fill out the form and our team will get back to you within 24 hours.
+            </p>
+            <div className="space-y-6">
+              {/* Visit Us */}
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <span className="material-symbols-outlined text-orange-600 dark:text-orange-400">
+                    location_on
+                  </span>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-slate-900 dark:text-white mb-1">
+                    Visit Us
                   </h4>
-                  <p>
+                  <p className="text-slate-600 dark:text-slate-400 text-sm">
                     {data.location.building}, {data.location.room}
                   </p>
-                  <p>{data.location.address}</p>
-                  <p>{data.location.city}</p>
-                </div>
-              </div>
-
-              {/* Contact Details Block */}
-              <div className="flex gap-4">
-                <span className="material-symbols-outlined text-slate-400 mt-1">
-                  alternate_email
-                </span>
-                <div className="text-slate-600 dark:text-slate-400 space-y-1">
-                  <h4 className="font-bold text-slate-900 dark:text-white uppercase text-xs tracking-widest mb-1">
-                    Communication
-                  </h4>
-                  <p className="text-sm">
-                    Primary: {data.location.primaryEmail}
+                  <p className="text-slate-600 dark:text-slate-400 text-sm">
+                    {data.location.address}
                   </p>
-                  <p className="text-sm">Phone: {data.location.phone}</p>
-                  <p className="text-sm italic">Fax: {data.location.fax}</p>
                 </div>
               </div>
-            </div>
 
-            <hr className="border-slate-200 dark:border-slate-800" />
-
-            {/* Office Hours */}
-            <div className="space-y-4">
-              <div className="flex items-center gap-2 text-slate-900 dark:text-white">
-                <span className="material-symbols-outlined text-blue-600">
-                  schedule
-                </span>
-                <h4 className="font-bold uppercase text-xs tracking-widest">
-                  Office Hours
-                </h4>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {data.officeHours.map((open, index) => (
-                  <div
-                    key={index}
-                    className="p-3 bg-slate-50 dark:bg-slate-900 rounded-lg border border-slate-100 dark:border-slate-800"
-                  >
-                    <h5 className="font-semibold text-slate-900 dark:text-white text-sm">
-                      {open.day}{" "}
-                      <span className="text-blue-600 ml-1">{open.time}</span>
-                    </h5>
-                    <p className="text-xs text-slate-500 mt-1">{open.note}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <hr className="border-slate-200 dark:border-slate-800" />
-
-            {/* Social Links */}
-            {/* Social Media Grid */}
-            <div className="space-y-4">
-              <h4 className="font-bold text-slate-900 dark:text-white uppercase text-xs tracking-widest px-1">
-                Connect With Us
-              </h4>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                {data.socialLinks.map((link, index) => {
-                  // Determine icon based on name (Case-insensitive)
-                  const name = (link.name ?? link).toLowerCase();
-                  let icon = "link"; // Default icon
-                  if (name.includes("facebook")) icon = "facebook";
-                  if (name.includes("twitter") || name.includes("x"))
-                    icon = "brand_awareness";
-                  if (name.includes("instagram")) icon = "photo_camera";
-                  if (name.includes("linkedin")) icon = "work";
-                  if (name.includes("github")) icon = "code";
-
-                  return (
-                    <Link
-                      key={index}
-                      to={link.url ?? link}
-                      className="group flex flex-col items-center justify-center p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl hover:border-blue-500 hover:shadow-md transition-all duration-300"
-                    >
-                      <span className="material-symbols-outlined text-slate-400 group-hover:text-blue-600 transition-colors mb-2">
-                        {icon}
-                      </span>
-                      <span className="text-xs font-semibold text-slate-700 dark:text-slate-300 group-hover:text-blue-600 truncate w-full text-center">
-                        {link.name ?? link}
-                      </span>
-                    </Link>
-                  );
-                })}
-              </div>
-              {/* Newsletter Subscription */}
-              <div className="pt-6 border-t border-slate-200 dark:border-slate-800">
-                <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
-                  <span className="material-symbols-outlined text-blue-600">
-                    mail
+              {/* Email Us */}
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <span className="material-symbols-outlined text-orange-600 dark:text-orange-400">
+                    email
                   </span>
-                  Stay Connected
-                </h4>
-                <p className="text-sm text-slate-600 dark:text-slate-400 mb-4">
-                  Subscribe to our newsletter for the latest updates and news.
-                </p>
-                <form onSubmit={handleSubscribe} className="space-y-3">
-                  <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Enter your email"
-                    className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    required
-                  />
-                  <button
-                    type="submit"
-                    className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
-                    disabled={isLoading || isSubscribed}
-                  >
-                    <span className="material-symbols-outlined text-lg">
-                      {isSubscribed ? "check" : isLoading ? "sync" : "send"}
-                    </span>
-                    {isSubscribed
-                      ? "Subscribed!"
-                      : isLoading
-                      ? "Subscribing..."
-                      : "Subscribe"}
-                  </button>
-                </form>
-                {error && <p className="text-xs text-red-500 mt-2">{error}</p>}
-                {isSubscribed && (
-                  <p className="text-xs text-green-600 mt-2">
-                    Thank you for subscribing!
+                </div>
+                <div>
+                  <h4 className="font-semibold text-slate-900 dark:text-white mb-1">
+                    Email Us
+                  </h4>
+                  <p className="text-slate-600 dark:text-slate-400 text-sm">
+                    {data.contactInfo?.[0]}
                   </p>
-                )}
-              </div>{" "}
+                  <p className="text-slate-600 dark:text-slate-400 text-sm">
+                    {data.contactInfo?.[1]}
+                  </p>
+                </div>
+              </div>
+
+              {/* Call Us */}
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <span className="material-symbols-outlined text-orange-600 dark:text-orange-400">
+                    phone
+                  </span>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-slate-900 dark:text-white mb-1">
+                    Call Us
+                  </h4>
+                  <p className="text-slate-600 dark:text-slate-400 text-sm">
+                    {data.contactInfo?.[2]}
+                  </p>
+                  <p className="text-slate-600 dark:text-slate-400 text-sm">
+                    {data.contactInfo?.[3]}
+                  </p>
+                </div>
+              </div>
+
+              {/* Office Hours */}
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <span className="material-symbols-outlined text-orange-600 dark:text-orange-400">
+                    schedule
+                  </span>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-slate-900 dark:text-white mb-1">
+                    Office Hours
+                  </h4>
+                  {data.officeHours?.map((hours, index) => (
+                    <p key={index} className="text-slate-600 dark:text-slate-400 text-sm">
+                      {hours.day}: {hours.time}
+                    </p>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Right Side: Contact Form */}
+          <div className={`transition-all duration-800 ${
+            headerVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
+          }`}>
+            <div className="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-lg">
+              <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">
+                Send us a Message
+              </h3>
+
+              <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Name and Email Row */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="group">
+                    <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-3 transition-colors duration-300 group-focus-within:text-orange-500">
+                      Your Name
+                    </label>
+                    <div className="relative">
+                      <input
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        placeholder="John Doe"
+                        className="form-input peer"
+                        required
+                      />
+                      <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-orange-500/20 to-blue-500/20 opacity-0 peer-focus:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                    </div>
+                  </div>
+                  <div className="group">
+                    <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-3 transition-colors duration-300 group-focus-within:text-orange-500">
+                      Email Address
+                    </label>
+                    <div className="relative">
+                      <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        placeholder="john@example.com"
+                        className="form-input peer"
+                        required
+                      />
+                      <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-orange-500/20 to-blue-500/20 opacity-0 peer-focus:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Subject */}
+                <div className="group">
+                  <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-3 transition-colors duration-300 group-focus-within:text-orange-500">
+                    Subject
+                  </label>
+                  <div className="relative">
+                    <input
+                      type="text"
+                      name="subject"
+                      value={formData.subject}
+                      onChange={handleInputChange}
+                      placeholder="How can we help you?"
+                      className="form-input peer"
+                      required
+                    />
+                    <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-orange-500/20 to-blue-500/20 opacity-0 peer-focus:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                  </div>
+                </div>
+
+                {/* Message */}
+                <div className="group">
+                  <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-3 transition-colors duration-300 group-focus-within:text-orange-500">
+                    Message
+                  </label>
+                  <div className="relative">
+                    <textarea
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      rows={6}
+                      placeholder="Write your message here..."
+                      className="form-input peer resize-none"
+                      required
+                    />
+                    <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-orange-500/20 to-blue-500/20 opacity-0 peer-focus:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                  </div>
+                </div>
+
+                {/* Submit Button */}
+                <button
+                  type="submit"
+                  className="group relative w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-[1.02] hover:shadow-2xl overflow-hidden"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="relative flex items-center justify-center gap-3">
+                    <span className="material-symbols-outlined transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
+                      send
+                    </span>
+                    <span className="font-semibold tracking-wide">Send Message</span>
+                  </div>
+                  <div className="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                </button>
+              </form>
             </div>
           </div>
         </div>

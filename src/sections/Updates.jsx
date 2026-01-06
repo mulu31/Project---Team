@@ -22,7 +22,7 @@ export default function Updates() {
   };
 
   return (
-    <section className="py-16 px-4 bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
+    <section id="updates" className="py-16 px-4 bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">

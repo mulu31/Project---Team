@@ -5,18 +5,18 @@ export const getMissionVisionData = () => {
             id: 1,
             type: "mission",
             title: "Our Mission",
-            subtitle: "Empowering Students Through Practical Innovation",
+            subtitle: "Connecting Haramaya Talent with Real-World Opportunities",
             icon: "fas fa-bullseye",
             paragraphs: [
-                "To create a dynamic ecosystem where students transform theoretical knowledge into practical expertise by working on real-world projects that solve meaningful problems. We bridge the gap between academic learning and industry requirements through hands-on experience, mentorship, and collaborative innovation.",
+                "To bridge the gap between Haramaya University students and professional opportunities by creating pathways for skilled students to connect with companies physically and on UpWork, while training passionate beginners to gain market-relevant skills. We serve as a launchpad for Ethiopian tech talent.",
                 
-                "We provide structured pathways for students to progress from learning fundamentals to contributing to meaningful projects, and ultimately to engaging in professional freelance opportunities. Our mission is to ensure every member gains not just technical skills, but also professional competencies, portfolio pieces, and industry connections that accelerate their career growth.",
+                "We provide dual pathways: 1) For skilled students, we facilitate connections with local companies in Dire Dawa, Addis Ababa, and remote opportunities through UpWork. 2) For beginners, we offer structured 'Zero to Skill' training in web development, digital tools, and freelancing basics. Our success is measured by student placements and skill acquisition.",
                 
-                "Through partnerships with companies, startups, and non-profits, we connect student talent with real-world challenges, creating mutual value for both students and organizations. We measure our success by the tangible impact our members make in the tech industry and the professional opportunities they secure."
+                "Through partnerships with Ethiopian businesses and practical training, we aim to reduce graduate unemployment by equipping students with in-demand skills and professional connections. We believe every Haramaya student deserves access to opportunities that match their potential."
             ],
             quote: {
-                text: "We don't just teach technology—we build the future with it.",
-                author: "Alex Chen, Club Founder"
+                text: "We don't just learn skills—we connect them to opportunities.",
+                author: "Abebe Tadesse, Project Team Founder"
             },
             images: [
                 "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
@@ -26,66 +26,66 @@ export const getMissionVisionData = () => {
             coreElements: [
                 {
                     icon: "fas fa-handshake",
-                    title: "Industry Collaboration",
-                    description: "Partnering with companies for real projects"
+                    title: "Company Connections",
+                    description: "Bridging students with Ethiopian businesses"
                 },
                 {
                     icon: "fas fa-user-graduate",
-                    title: "Student Development",
-                    description: "Building skills through hands-on experience"
+                    title: "Skill Development",
+                    description: "Practical training for beginners"
                 },
                 {
-                    icon: "fas fa-project-diagram",
-                    title: "Project Excellence",
-                    description: "Delivering high-quality technical solutions"
+                    icon: "fas fa-briefcase",
+                    title: "UpWork Integration",
+                    description: "Global freelancing opportunities"
                 },
                 {
-                    icon: "fas fa-dollar-sign",
-                    title: "Economic Empowerment",
-                    description: "Creating paid opportunities for students"
+                    icon: "fas fa-users",
+                    title: "Community Building",
+                    description: "Peer support and networking"
                 }
             ],
             statistics: [
                 {
-                    value: "325+",
-                    label: "Students Empowered"
+                    value: "0+",
+                    label: "Students Connecting"
                 },
                 {
-                    value: "$85K+",
-                    label: "Student Earnings"
+                    value: "ETB 0+",
+                    label: "Target Student Earnings"
                 },
                 {
-                    value: "54",
-                    label: "Projects Completed"
+                    value: "0",
+                    label: "Projects in Pipeline"
                 },
                 {
-                    value: "95%",
-                    label: "Client Satisfaction"
+                    value: "3+",
+                    label: "Target Company Partners"
                 }
             ],
             actionSteps: [
-                "Weekly workshops and technical training sessions",
-                "Project-based learning with industry mentorship",
-                "Freelance opportunity matching with vetted clients",
-                "Career development and networking events"
+                "Weekly skill-building sessions in Building 2, Room 10",
+                "Company networking events and campus recruitment",
+                "UpWork profile setup and freelancing workshops",
+                "Peer mentoring between skilled and beginner members"
             ]
         },
         {
             id: 2,
             type: "vision",
             title: "Our Vision",
-            subtitle: "Redefining Tech Education for the Next Generation",
+            subtitle: "Building Ethiopia's Tech Talent Pipeline",
             icon: "fas fa-eye",
             paragraphs: [
-                "To become the leading global platform where every student with passion for technology can access opportunities, resources, and mentorship to build successful careers. We envision a world where student innovation drives technological advancement and where academic institutions and industries collaborate seamlessly through student talent.",
+                "To establish Project Team as the premier talent development hub at Haramaya University, recognized for producing job-ready graduates who contribute to Ethiopia's digital economy. We envision a future where no Haramaya student graduates without practical experience and professional connections.",
                 
-                "We aim to establish a self-sustaining ecosystem where successful alumni mentor current students, where student projects evolve into startups, and where our club serves as a talent pipeline for the world's leading tech companies. Our vision extends beyond campus boundaries to create a global network of student innovators.",
+                "We aim to create a sustainable model where successful alumni mentor current students, where our training programs adapt to local market needs, and where we become the go-to talent source for Ethiopian tech companies. Our vision extends beyond campus to impact Ethiopia's economic development.",
                 
-                "By 2030, we envision having chapters in 50+ universities worldwide, facilitating $1M+ in annual student earnings, and launching 100+ student-founded startups. We believe in a future where student potential is unlimited, and technology education is fundamentally practical, inclusive, and opportunity-driven."
+                "By 2030, we envision connecting 500+ Haramaya students with meaningful opportunities, facilitating ETB 5M+ in student earnings, and establishing strong partnerships with 50+ Ethiopian companies. We believe in empowering Ethiopian youth to drive the nation's technological transformation."
             ],
             quote: {
-                text: "The best way to predict the future is to create it.",
-                author: "Sarah Johnson, Vision Lead"
+                text: "ሰው ሁሉ የሚማርበት እድል ሊኖረው ይገባል።",
+                author: "Rahel Mohammed, Community Manager"
             },
             images: [
                 "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
@@ -95,47 +95,47 @@ export const getMissionVisionData = () => {
             futureGoals: [
                 {
                     year: "2025",
-                    goal: "Expand to 10 university chapters",
-                    metric: "1000+ students impacted"
+                    goal: "Establish first 3 company partnerships",
+                    metric: "Place 5 students in opportunities"
+                },
+                {
+                    year: "2026",
+                    goal: "Expand training programs",
+                    metric: "Train 100+ beginners"
                 },
                 {
                     year: "2027",
-                    goal: "Launch student startup incubator",
-                    metric: "20+ startups launched"
-                },
-                {
-                    year: "2030",
-                    goal: "Global network of 50+ chapters",
-                    metric: "$1M+ student earnings annually"
+                    goal: "Become self-sustaining model",
+                    metric: "ETB 1M+ student earnings"
                 }
             ],
             impactAreas: [
                 {
-                    icon: "fas fa-globe-americas",
-                    title: "Global Reach",
-                    description: "International chapters and remote opportunities"
+                    icon: "fas fa-map-marker-alt",
+                    title: "Local Impact",
+                    description: "Serving Dire Dawa and Ethiopian companies"
                 },
                 {
-                    icon: "fas fa-lightbulb",
-                    title: "Innovation Hub",
-                    description: "Student-led research and development"
+                    icon: "fas fa-graduation-cap",
+                    title: "Education Enhancement",
+                    description: "Complementing academic learning"
                 },
                 {
-                    icon: "fas fa-chart-line",
-                    title: "Economic Impact",
-                    description: "Significant student income generation"
+                    icon: "fas fa-money-bill-wave",
+                    title: "Economic Empowerment",
+                    description: "Student income generation"
                 },
                 {
                     icon: "fas fa-network-wired",
-                    title: "Industry Network",
-                    description: "Strong partnerships with tech leaders"
+                    title: "Industry Links",
+                    description: "Strong Ethiopian business connections"
                 }
             ],
             corePrinciples: [
-                "Student potential is unlimited when given the right opportunities",
-                "Practical experience should complement academic learning",
-                "Technology should be accessible to all, regardless of background",
-                "Innovation thrives in collaborative, diverse environments"
+                "Every student deserves access to opportunity, regardless of starting point",
+                "Practical skills should match local market demands",
+                "Success is measured by student placements and skill acquisition",
+                "Community support accelerates individual growth"
             ]
         }
     ];
@@ -148,18 +148,18 @@ export const getExtendedMissionVisionData = () => {
             id: 3,
             type: "values",
             title: "Our Core Values",
-            subtitle: "Guiding Principles That Define Us",
+            subtitle: "መሰረታዊ እሴቶቻችን (Our Foundational Values)",
             icon: "fas fa-heart",
             paragraphs: [
-                "Our values are the foundation of everything we do. They guide our decisions, shape our culture, and define our relationships with members, partners, and the community. These principles ensure we stay true to our mission while pursuing our vision.",
+                "These values guide our decisions and define our culture as we build Project Team from the ground up. They reflect both our Ethiopian context and our commitment to student development.",
                 
-                "We believe in creating an inclusive environment where every student, regardless of background or experience level, can thrive. Excellence, collaboration, and integrity are not just ideals—they're practices we live by in every project, workshop, and interaction.",
+                "We believe in 'ትብብር' (collaboration) and 'ትምህርት' (learning) as essential for growth. Our values ensure we create an inclusive environment where every Haramaya student can develop their potential and connect with opportunities.",
                 
-                "These values help us maintain high standards while fostering a supportive community where innovation flourishes. They're what make our club more than just an organization—they make it a movement transforming tech education."
+                "These principles help us build a sustainable club that serves both skilled students seeking connections and passionate beginners seeking skills. They represent our commitment to Ethiopia's development through education."
             ],
             quote: {
-                text: "Our values are our compass, guiding us toward meaningful impact.",
-                author: "Michael Rodriguez, Values Committee Lead"
+                text: "የጋራ ስኬት የግለሰብ ስኬት ይበልጣል።",
+                author: "Mekdes Assefa, Business Liaison"
             },
             images: [
                 "https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
@@ -169,33 +169,33 @@ export const getExtendedMissionVisionData = () => {
             valuesList: [
                 {
                     icon: "fas fa-users",
-                    title: "Collaboration",
-                    description: "We believe great things happen when we work together"
+                    title: "ትብብር (Collaboration)",
+                    description: "We achieve more together than alone"
                 },
                 {
-                    icon: "fas fa-rocket",
-                    title: "Innovation",
-                    description: "We embrace creativity and new approaches"
+                    icon: "fas fa-hands-helping",
+                    title: "ድጋፍ (Support)",
+                    description: "We lift each other up"
                 },
                 {
                     icon: "fas fa-graduation-cap",
-                    title: "Learning",
-                    description: "We foster continuous growth and development"
+                    title: "ትምህርት (Learning)",
+                    description: "We embrace continuous growth"
                 },
                 {
                     icon: "fas fa-handshake",
-                    title: "Integrity",
-                    description: "We act with honesty and transparency"
+                    title: "እውነት (Integrity)",
+                    description: "We act with honesty in all dealings"
                 },
                 {
                     icon: "fas fa-heart",
-                    title: "Community",
-                    description: "We support and uplift each other"
+                    title: "ማህበረሰብ (Community)",
+                    description: "We build strong support networks"
                 },
                 {
-                    icon: "fas fa-trophy",
-                    title: "Excellence",
-                    description: "We strive for quality in everything we do"
+                    icon: "fas fa-bullseye",
+                    title: "ቁርጠኝነት (Determination)",
+                    description: "We persist through challenges"
                 }
             ]
         }

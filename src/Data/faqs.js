@@ -2,39 +2,57 @@ export const getFAQData = () => {
     return [
         {
             faqId: 1,
-            question: "How can I join Tech Innovators Club?",
-            answer: "Joining our club is simple! We have open membership for all students. You can join by attending our weekly meetings (every Thursday at 6 PM in the Innovation Center), signing up through our website's membership form, or contacting our membership coordinator. No prior experience is required - we welcome students from all majors and skill levels.",
+            question: "How can I join Project Team, Hucisa Club?",
+            answer: "As a new club starting in 2024, we're actively recruiting our founding members! Join by: 1) Attending our weekly meetings (Monday & Wednesday 4-6 PM in Building 2, Room 10), 2) Reaching out via Telegram (@ProjectTeamHucisa), or 3) Emailing projectteam.hucisa@haramaya.edu.et. We're looking for both skilled students and passionate beginners willing to learn. No membership fees - just commitment and enthusiasm.",
             link: "/join",
             category: "Membership",
             importance: "high",
-            lastUpdated: "2024-03-15"
+            lastUpdated: "2024-12-01"
         },
         {
             faqId: 2,
-            question: "What kind of projects does the club work on?",
-            answer: "Our club works on a diverse range of tech projects including web development (React, Node.js), mobile apps (React Native, Flutter), AI/ML projects (Python, TensorFlow), data science, IoT, and blockchain applications. We have beginner-friendly projects for those new to coding as well as advanced projects for experienced developers. Recent projects include a quantum analytics dashboard, e-commerce platform, and AR campus navigation app.",
-            link: "/projects",
-            category: "Projects",
+            question: "What kind of opportunities does Project Team offer?",
+            answer: "We focus on two main tracks: 1) For skilled students: Direct connections to local companies in Dire Dawa/Addis Ababa and UpWork freelance training. 2) For beginners: Comprehensive skill training in web development, data analysis, and digital tools. We're starting with Ethiopian tech market-relevant skills: website development, digital marketing, basic programming, and freelancing basics.",
+            link: "/opportunities",
+            category: "Opportunities",
             importance: "high",
-            lastUpdated: "2024-02-28"
+            lastUpdated: "2024-12-01"
         },
         {
             faqId: 3,
-            question: "Do I need coding experience to participate?",
-            answer: "Absolutely not! We welcome complete beginners and provide resources to help you get started. We offer weekly workshops, coding tutorials, and mentorship programs. Many of our members started with zero coding experience and have gone on to build impressive projects. We have different tracks for different skill levels, so you can learn at your own pace while working on meaningful projects.",
-            link: "/resources/beginner-guide",
+            question: "I have no technical skills - can I still join?",
+            answer: "Yes! Our 'Zero to Skill' program is specifically designed for passionate beginners. We start from absolute basics and provide structured training. Many Ethiopian tech professionals started with no background. We teach practical skills used by local companies and freelancers. All you need is commitment to attend sessions and complete practice assignments. No prior coding or technical knowledge required.",
+            link: "/training",
             category: "Getting Started",
-            importance: "medium",
-            lastUpdated: "2024-03-10"
+            importance: "high",
+            lastUpdated: "2024-12-01"
         },
         {
             faqId: 4,
-            question: "How can companies collaborate with the club?",
-            answer: "We offer several collaboration opportunities for companies: 1) Project sponsorships where companies can propose real-world problems for our members to solve, 2) Guest speaker sessions and workshops, 3) Hackathon sponsorships, 4) Internship and recruitment partnerships, and 5) Research collaborations. We've partnered with companies like Google, Microsoft, and Amazon on various initiatives.",
-            link: "/collaborate",
+            question: "How can local companies work with Project Team?",
+            answer: "We're building our first company partnerships. Companies can: 1) Offer internship opportunities for our skilled members, 2) Provide real projects for student teams (great for startups needing affordable solutions), 3) Conduct guest sessions about industry needs, 4) Partner for recruitment. We're initially focusing on companies in Dire Dawa, Addis Ababa, and remote opportunities. Contact us at projectteam.hucisa@haramaya.edu.et to explore collaboration.",
+            link: "/partnerships",
             category: "Partnerships",
             importance: "medium",
-            lastUpdated: "2024-01-22"
+            lastUpdated: "2024-12-01"
+        },
+        {
+            faqId: 5,
+            question: "What is Hucisa Club and how is Project Team related?",
+            answer: "Hucisa Club (Haramaya University Computer Science & IT Association) was founded in 2022 and serves as the main tech student organization. Project Team is a specialized division launched in 2024 focusing specifically on connecting students with industry opportunities and skill development. While Hucisa covers broader tech activities, Project Team concentrates on professional development, freelancing, and company connections.",
+            link: "/about-hucisa",
+            category: "Organization",
+            importance: "medium",
+            lastUpdated: "2024-12-01"
+        },
+        {
+            faqId: 6,
+            question: "Is there any cost to participate?",
+            answer: "No fees for participation. All our resources, training, and mentorship are free for Haramaya University students. We operate as a student-led initiative under the university's support. Some specialized certifications or premium online courses might have optional costs, but our core program is completely free. We may organize fundraising for specific events, but basic membership and training are free.",
+            link: "/membership",
+            category: "Membership",
+            importance: "medium",
+            lastUpdated: "2024-12-01"
         }
     ];
 };

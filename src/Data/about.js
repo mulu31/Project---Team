@@ -2,85 +2,100 @@ export const getAboutClubData = () => {
   return [
     {
       clubId: 1,
-      clubName: "Tech Innovators Club",
-      tagline: "Where Students Build Tomorrow's Technology Today",
+      clubName: "Project Team, Hucica Club",
+      tagline:
+        "Building Ethiopia's Next Tech Generation at Haramaya University",
       description: [
-        "Tech Innovators Club is a student-led organization founded in 2020 with a mission to bridge the gap between academic learning and real-world tech industry experience. We create an ecosystem where students can work on meaningful projects, connect with industry professionals, and develop the skills needed for successful tech careers. Our unique approach combines hands-on project development with freelance opportunities, allowing students to gain practical experience while contributing to real client projects.",
-        "What sets us apart is our dual focus on innovation and professional development. We don't just learn technologies—we apply them to solve real problems for real clients. Through our carefully structured program, students progress from foundational workshops to collaborative projects, and eventually to freelance opportunities with vetted industry partners. Our members have worked with startups, non-profits, and established companies, delivering solutions that range from web applications and mobile apps to AI-powered tools and data analytics platforms.",
-        "Our community thrives on collaboration, mentorship, and continuous learning. With over 300 active members, 50+ completed projects, and partnerships with leading tech companies, we've created a platform where students can transform their theoretical knowledge into practical expertise. Whether you're a beginner looking to learn or an experienced developer seeking freelance opportunities, Tech Innovators Club provides the environment, resources, and connections to help you succeed in the tech industry.",
+        "Project Team is a newly launched initiative under the Hucisa Club at Haramaya University, founded in December 2024. Operating from Building 2, Room 10 on the Main Campus, we're starting from ground zero to create a bridge between Haramaya's talented students and real-world opportunities. Our dual mission focuses on connecting technically skilled students with employment through local company partnerships and UpWork freelancing, while running intensive skill-building programs for passionate beginners with no prior experience.",
+        "As a startup initiative, we're building everything from scratch: establishing our first company partnerships with Dire Dawa and Addis Ababa businesses, creating structured training curricula for complete beginners, and setting up systems for project collaboration. Unlike established clubs, we're documenting our journey from zero to impact, creating a model that other Ethiopian universities can replicate. Our current focus is building foundational systems and onboarding our first cohort of 30 pioneer members who will shape our culture and processes.",
+        "Our vision is to become the premier talent pipeline from Haramaya University to Ethiopia's growing tech ecosystem. We're starting small but thinking big—documenting every success and failure, creating sustainable systems, and building genuine relationships with local tech companies. In our first year, success means helping our first 5 students secure freelance work, training 20 beginners to technical proficiency, and establishing 3 solid company partnerships in the region.",
       ],
       statistics: {
-        totalMembers: 325,
-        activeMembers: 280,
-        totalProjects: 54,
-        hackathonWins: 8,
-        totalPartners: 24,
-        totalRevenueGenerated: "$85,000+",
+        totalMembers: 0, // Starting from zero
+        activeMembers: 0, // Recruitment begins January 2025
+        totalProjects: 0, // No projects yet
+        hackathonWins: 0, // Just starting
+        totalPartners: 0, // Building partnerships
+        totalRevenueGenerated: "$0", // No earnings yet
       },
       coreValues: [
-        "Practical Learning Through Real Projects",
+        "Learning Through Real Projects",
         "Industry Connection & Professional Development",
-        "Collaborative Innovation",
+        "Collaborative Growth",
         "Entrepreneurial Mindset",
-        "Community & Mentorship",
+        "Community & Peer Mentorship",
       ],
       uniqueFeatures: [
         {
-          title: "Project-to-Freelance Pipeline",
+          title: "Zero-to-Skill Pipeline",
           description:
-            "Structured pathway from learning projects to paid freelance work with vetted clients",
+            "Complete beginner to job-ready training for students with passion but no prior technical experience",
         },
         {
-          title: "Industry Mentorship Program",
+          title: "Local-First Company Network",
           description:
-            "One-on-one mentorship from professionals at partner companies",
+            "Focus on building partnerships with Ethiopian tech companies, startups, and digital agencies in Dire Dawa, Addis Ababa, and the region",
         },
         {
-          title: "Client Project Incubator",
+          title: "UpWork Launchpad Program",
           description:
-            "Dedicated space for students to work on real client projects with guidance",
+            "Step-by-step guidance for students to create profiles, build portfolios, and secure first freelance projects",
         },
         {
-          title: "Skill-Based Team Formation",
+          title: "Project-Based Learning Lab",
           description:
-            "Smart matching of students to projects based on skills and interests",
+            "Hands-on training through real projects in our dedicated space at Building 2, Room 10",
         },
       ],
       achievements: [
-        "2023 University Innovation Award",
-        "National Hackathon Champions (2022, 2023)",
-        "Recognized by Forbes as 'Top Student Tech Collective'",
-        "Featured in TechCrunch for innovative education model",
-        "$50,000+ in student earnings from freelance projects",
+        "Officially launched under Hucisa Club (founded 2022)",
+        "Secured dedicated space on Haramaya Main Campus",
+        "Developing structured curriculum for 2025 launch",
+        "Building founding team of student volunteers",
+        "Establishing first local company connections",
       ],
       partnershipTypes: [
         {
-          type: "Industry Collaboration",
-          description: "Long-term projects with established tech companies",
-          examples: ["Google", "Microsoft", "Amazon", "IBM"],
-        },
-        {
-          type: "Startup Partnerships",
-          description: "MVP development and tech consulting for startups",
-          examples: ["TechStart Inc.", "InnovateLabs", "FutureFounders"],
-        },
-        {
-          type: "Non-Profit Projects",
+          type: "Local Tech Companies",
           description:
-            "Pro-bono tech solutions for social impact organizations",
+            "Partnerships with Ethiopian businesses for internships and project collaborations",
           examples: [
-            "Code for Good",
-            "Tech for Change",
-            "Digital Literacy Foundation",
+            "Local software firms in Dire Dawa",
+            "Addis Ababa startups",
+            "Regional tech agencies",
           ],
         },
         {
-          type: "Freelance Marketplace",
+          type: "UpWork Integration",
           description:
-            "Platform connecting students with freelance opportunities",
-          examples: ["Upwork", "Freelancer.com", "Toptal Student Program"],
+            "Training and support for students entering global freelance market",
+          examples: [
+            "Upwork profile setup",
+            "First project guidance",
+            "Portfolio development",
+          ],
         },
-      ]
+        {
+          type: "Skill Development Partners",
+          description:
+            "Collaborations with training platforms and certification providers",
+          examples: [
+            "Free online learning resources",
+            "University department collaborations",
+            "Open-source project guidance",
+          ],
+        },
+        {
+          type: "University Department Links",
+          description:
+            "Connections with Haramaya University faculties for project opportunities",
+          examples: [
+            "Computer Science Department",
+            "Business Faculty",
+            "Engineering School",
+          ],
+        },
+      ],
     },
   ];
 };

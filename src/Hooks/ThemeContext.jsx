@@ -3,6 +3,7 @@ import { createContext, useContext, useState, useEffect } from "react";
 const ThemeContext = createContext({
   isDark: false,
   toggleTheme: () => {},
+  isTransitioning: false,
 });
 
 export const ThemeProvider = ({ children }) => {
@@ -10,7 +11,6 @@ export const ThemeProvider = ({ children }) => {
     // Try to read from localStorage safely
     try {
       const savedTheme = localStorage.getItem("theme");
-      console.log("Initial theme from localStorage:", savedTheme);
       return savedTheme === "dark";
     } catch (error) {
       console.log("Error reading localStorage, defaulting to light:", error);
@@ -18,30 +18,40 @@ export const ThemeProvider = ({ children }) => {
     }
   });
 
-  useEffect(() => {
-    console.log("Theme changed to:", isDark ? "dark" : "light");
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
-    // Apply class to html or body element
+  useEffect(() => {
+    // Add transition class to body for smooth theme changes
+    document.body.classList.add('theme-transition');
+    
+    // Apply theme classes
     if (isDark) {
       document.documentElement.classList.add("dark");
       document.body.classList.add("dark");
       localStorage.setItem("theme", "dark");
-      console.log("Applied dark theme class");
     } else {
       document.documentElement.classList.remove("dark");
       document.body.classList.remove("dark");
       localStorage.setItem("theme", "light");
-      console.log("Removed dark theme class");
     }
   }, [isDark]);
 
   const toggleTheme = () => {
-    console.log("Toggling theme from:", isDark ? "dark" : "light");
-    setIsDark((prev) => !prev);
+    setIsTransitioning(true);
+    
+    // Add a slight delay to make the transition more noticeable
+    setTimeout(() => {
+      setIsDark((prev) => !prev);
+      
+      // Reset transition state after theme change
+      setTimeout(() => {
+        setIsTransitioning(false);
+      }, 500);
+    }, 50);
   };
 
   return (
-    <ThemeContext.Provider value={{ isDark, toggleTheme }}>
+    <ThemeContext.Provider value={{ isDark, toggleTheme, isTransitioning }}>
       {children}
     </ThemeContext.Provider>
   );

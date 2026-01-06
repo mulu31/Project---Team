@@ -2,13 +2,11 @@ import React from "react";
 import { getContactInfo } from "../Data/contactInfo";
 import { Link } from "react-router-dom";
 import { useNewsletter } from "../Hooks/useNewsletter";
-import { useAuth } from "../Hooks/AuthContext.jsx";
 
 export default function Footer() {
   const contact = getContactInfo()[0];
   const { email, setEmail, isSubscribed, isLoading, error, handleSubscribe } =
     useNewsletter();
-  const { admin, logout } = useAuth();
 
   return (
     <footer className="w-full bg-slate-900 dark:bg-slate-950 text-slate-300 dark:text-slate-400 py-16 px-4 mt-20 transition-colors duration-300">
@@ -148,17 +146,6 @@ export default function Footer() {
                 {quick.text}
               </Link>
             ))}
-            {admin && (
-              <Link
-                to="/admin"
-                className="flex items-center gap-2 text-sm hover:text-white dark:hover:text-slate-100 transition-colors group"
-              >
-                <span className="material-symbols-outlined text-lg text-slate-500 dark:text-slate-600 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors">
-                  admin_panel_settings
-                </span>
-                Admin Dashboard
-              </Link>
-            )}
           </div>
         </div>
       </div>
@@ -173,14 +160,6 @@ export default function Footer() {
           <a href="#" className="hover:text-white dark:hover:text-slate-100">
             Terms of Service
           </a>
-          {admin && (
-            <button
-              onClick={logout}
-              className="hover:text-white dark:hover:text-slate-100"
-            >
-              Logout
-            </button>
-          )}
         </div>
       </div>
     </footer>

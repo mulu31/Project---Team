@@ -3,117 +3,71 @@ export const getLeadersData = () => {
         {
             id: 1,
             profilePicture: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-            fullName: "Alex Chen",
-            role: "President & Founder",
+            fullName: "Abdulfetah Jemal (AJ)",
+            role: "Hucisa Club President",
             socialLinks: {
-                telegram: "https://t.me/alexchen",
-                linkedIn: "https://linkedin.com/in/alexchen",
-                github: "https://github.com/alexchen"
+                telegram: "https://t.me/abdulfetah_j",
+                linkedIn: "https://linkedin.com/in/abdulfetah-jemal",
+                github: "https://github.com/abdulfetahj"
             },
-            description: "Computer Science senior with 3+ years of leadership experience. Founded Tech Innovators Club in 2022. Specializes in AI/ML and full-stack development. Led the club to win 4 national hackathons and establish partnerships with Google, Microsoft, and Amazon. Passionate about creating inclusive tech communities and mentoring junior developers.",
-            expertise: ["AI/ML", "Leadership", "Full-Stack Development", "Public Speaking"],
-            year: "Senior",
-            major: "Computer Science",
-            email: "alex.chen@techinnovators.edu",
+            description: "5th year Software Engineering student at Haramaya University. Leading Hucisa Club since 2023. Passionate about fostering tech communities and bridging academia with industry. Oversees all Hucisa initiatives including Project Team, hackathons, and technical workshops. Previously interned at Ethiopian software companies in Addis Ababa.",
+            expertise: ["Software Engineering", "Leadership", "Community Building", "Project Management"],
+            year: "5th Year (Final Year)",
+            major: "Software Engineering",
+            email: "abdulfetah.jemal@haramaya.edu.et",
             achievements: [
-                "Founded Tech Innovators Club (2022)",
-                "Led 4 winning hackathon teams",
-                "Established 15+ industry partnerships",
-                "Mentored 50+ junior developers"
+                "Led Hucisa Club since 2023",
+                "Organized 3 university hackathons",
+                "Expanded club membership by 150%",
+                "Established partnerships with local tech companies"
             ],
             tenure: "2 years"
         },
         {
             id: 2,
             profilePicture: "https://images.unsplash.com/photo-1494790108755-2616b786d4d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-            fullName: "Maria Rodriguez",
-            role: "VP of Technology",
+            fullName: "Latera [Surname]",
+            role: "Project Team President",
             socialLinks: {
-                telegram: "https://t.me/mariarod",
-                linkedIn: "https://linkedin.com/in/mariarodriguez",
-                github: "https://github.com/mariarod"
+                telegram: "https://t.me/latera_p",
+                linkedIn: "https://linkedin.com/in/latera-projectteam",
+                github: "https://github.com/laterahu"
             },
-            description: "Software Engineering senior with expertise in full-stack development and cloud architecture. Previously interned at Google and Microsoft. Leads our technical workshops, hackathon preparations, and project mentorship programs. Built our club's project management system and technical curriculum. Passionate about making complex technologies accessible to everyone.",
-            expertise: ["React/Next.js", "Cloud Architecture", "System Design", "Technical Mentoring"],
-            year: "Senior",
+            description: "4th year Software Engineering student leading Project Team initiative. Founded Project Team in 2024 to connect Haramaya students with industry opportunities. Passionate about practical skill development and Ethiopian tech ecosystem growth. Manages Project Team's dual-track system: connecting skilled students with companies and training beginners.",
+            expertise: ["Software Engineering", "Team Leadership", "Industry Connections", "Skill Development"],
+            year: "4th Year",
             major: "Software Engineering",
-            email: "maria.rodriguez@techinnovators.edu",
+            email: "latera.surname@haramaya.edu.et",
             achievements: [
-                "Developed club's project management system",
-                "Led 20+ technical workshops",
-                "Mentored 8 successful project teams",
-                "Former Google & Microsoft intern"
+                "Founded Project Team in 2024",
+                "Developing company partnership network",
+                "Creating 'Zero to Skill' training curriculum",
+                "Building UpWork integration program"
             ],
-            tenure: "1.5 years"
+            tenure: "1 year (since founding)"
         },
         {
             id: 3,
             profilePicture: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-            fullName: "James Wilson",
-            role: "VP of Operations",
+            fullName: "Abebe Tadesse",
+            role: "Project Team Vice President",
             socialLinks: {
-                telegram: "https://t.me/jameswilson",
-                linkedIn: "https://linkedin.com/in/jameswilson",
-                github: "https://github.com/jameswilson"
+                telegram: "https://t.me/abebet",
+                linkedIn: "https://linkedin.com/in/abebetadesse",
+                github: "https://github.com/abebetadesse"
             },
-            description: "Business & Technology dual major with exceptional organizational skills. Manages club logistics, sponsorships, event planning, and budget. Organized our largest hackathon with 500+ participants and secured $50k+ in sponsorships. Bridges the gap between technical teams and business stakeholders. Creates sustainable systems for club growth and member engagement.",
-            expertise: ["Project Management", "Sponsorship Acquisition", "Event Planning", "Strategic Planning"],
-            year: "Junior",
-            major: "Business & Technology",
-            email: "james.wilson@techinnovators.edu",
+            description: "Senior Computer Science student specializing in web development. Co-founder of Project Team initiative. Focuses on technical training programs and project mentorship. Leads workshops on web development, freelancing basics, and portfolio building. Previously completed small freelance projects on UpWork and local platforms.",
+            expertise: ["Web Development", "Technical Training", "Freelancing", "Mentorship"],
+            year: "Senior",
+            major: "Computer Science",
+            email: "abebe.tadesse@haramaya.edu.et",
             achievements: [
-                "Secured $50k+ in sponsorships",
-                "Organized 500+ participant hackathon",
-                "Built club's operational framework",
-                "Increased member retention by 40%"
+                "Co-founded Project Team",
+                "Developed initial training materials",
+                "Completed 3 UpWork projects",
+                "Mentoring 10+ beginner students"
             ],
-            tenure: "1 year"
-        },
-        {
-            id: 4,
-            profilePicture: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-            fullName: "Robert Kim",
-            role: "VP of Community",
-            socialLinks: {
-                telegram: "https://t.me/robertkim",
-                linkedIn: "https://linkedin.com/in/robertkim",
-                github: "https://github.com/robertkim"
-            },
-            description: "Computer Engineering junior passionate about building inclusive tech communities. Manages member onboarding, mentorship programs, and community engagement initiatives. Created our peer mentorship program that pairs 100+ students annually. Focuses on diversity, equity, and inclusion in tech. Organized successful networking events with industry partners and alumni.",
-            expertise: ["Community Building", "Mentorship Programs", "DEI Initiatives", "Public Relations"],
-            year: "Junior",
-            major: "Computer Engineering",
-            email: "robert.kim@techinnovators.edu",
-            achievements: [
-                "Created peer mentorship program",
-                "Increased female participation by 60%",
-                "Organized 10+ networking events",
-                "Built alumni network of 200+"
-            ],
-            tenure: "1 year"
-        },
-        {
-            id: 5,
-            profilePicture: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-            fullName: "Sophia Lee",
-            role: "VP of Marketing & Outreach",
-            socialLinks: {
-                telegram: "https://t.me/sophialee",
-                linkedIn: "https://linkedin.com/in/sophialee",
-                github: "https://github.com/sophialee"
-            },
-            description: "Design & Technology major with expertise in digital marketing and brand development. Manages club's social media presence, website, and promotional materials. Increased our online following by 300% and improved event attendance by 50%. Creates engaging content and establishes partnerships with other student organizations. Passionate about telling compelling stories about technology and innovation.",
-            expertise: ["Digital Marketing", "Brand Strategy", "Content Creation", "UI/UX Design"],
-            year: "Sophomore",
-            major: "Design & Technology",
-            email: "sophia.lee@techinnovators.edu",
-            achievements: [
-                "Increased social media following by 300%",
-                "Redesigned club website and branding",
-                "Improved event attendance by 50%",
-                "Established 10+ cross-club partnerships"
-            ],
-            tenure: "8 months"
+            tenure: "1 year (since founding)"
         }
     ];
 };

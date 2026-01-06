@@ -152,7 +152,15 @@ export default function Footer() {
 
       {/* Bottom Copyright Bar */}
       <div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-slate-800 dark:border-slate-700 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-medium text-slate-500 dark:text-slate-600">
-        <p>© 2025 {contact.clubName}. All rights reserved.</p>
+        <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
+          <p>© 2025 {contact.clubName}. All rights reserved.</p>
+          <p className="flex items-center gap-1">
+            Developed by 
+            <span className="text-blue-400 dark:text-blue-300 font-semibold">
+              Mulu Beshada
+            </span>
+          </p>
+        </div>
         <div className="flex gap-6">
           <a href="#" className="hover:text-white dark:hover:text-slate-100">
             Privacy Policy

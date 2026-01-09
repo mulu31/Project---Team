@@ -53,7 +53,7 @@ export const getLeadersData = () => {
       major: "Software Engineering",
       email: "leteratujo890@gmail.com",
       achievements: [
-        "Founded Project Team in 2024",
+        "Founded Project Team in 2024 ",
         "Developing company partnership network",
         "Creating 'Zero to Skill' training curriculum",
         "Building UpWork integration program",

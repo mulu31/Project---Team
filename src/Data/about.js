@@ -60,7 +60,7 @@ export const getAboutClubData = () => {
           description:
             "Partnerships with Ethiopian businesses for internships and project collaborations",
           examples: [
-            "Local software firms in Dire Dawa",
+            "Local software firms in Haramaya University, Harar",
             "Addis Ababa startups",
             "Regional tech agencies",
           ],

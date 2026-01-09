@@ -8,18 +8,18 @@ export function getContactInfo() {
         room: "Room 10",
         address: "Haramaya University Main Campus",
         city: "Dire Dawa, Ethiopia",
-        mapLink: "https://maps.google.com/?q=Haramaya+University+Main+Campus+Dire+Dawa",
+        mapLink: "https://maps.google.com/?q=Haramaya+University+Main+Campus+Haramaya+University+Dire+Dawa+Ethiopia",
         coordinates: {
           lat: 9.4064,
           lng: 42.0130,
         },
       },
       contactInfo: [
-        "projectteam.hucisa@haramaya.edu.et",
-        "hu.cisa@haramaya.edu.et",
-        "+251 25 111 2222 (Univ. Extension)",
-        "+251 9xx xxx xxx (Club President)",
-        "+251 9xx xxx xxx (Club Secretary)",
+        "https://github.com/hucisa",
+        "abdulfetahjemal7se@gmail.com",
+        "+251 961 219 838 (Hucisa Team Head)",
+        "+251 945 618 348 (Club President)",
+        "+251 906 260 008 (Club Secretary)",
       ],
       socialLinks: [
         {
@@ -28,19 +28,9 @@ export function getContactInfo() {
           icon: "send",
         },
         {
-          name: "Instagram",
-          url: "https://instagram.com/projectteam_hucisa",
-          icon: "photo",
-        },
-        {
           name: "LinkedIn",
           url: "https://linkedin.com/company/hucisa",
           icon: "work",
-        },
-        {
-          name: "Facebook",
-          url: "https://facebook.com/groups/projectteamhucisa",
-          icon: "group",
         },
         {
           name: "GitHub",
@@ -49,7 +39,7 @@ export function getContactInfo() {
         },
         {
           name: "Gmail",
-          url: "mailto:projectteamhucisa@gmail.com",
+          url: "mailto:abdulfetahjemal7se@gmail.com",
           icon: "mail",
         },
       ],
